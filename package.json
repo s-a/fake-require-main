@@ -1,0 +1,28 @@
+{
+  "name": "fake-require-main",
+  "version": "1.0.0",
+  "description": "Fakes require.main for debug and testing purposes.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "bump": "npm version patch && git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-a/fake-require-main.git"
+  },
+  "keywords": [
+    "iron-node-tool",
+    "debug",
+    "test"
+  ],
+  "author": "Stephan Ahlf <stephan.ahlf@gmail.com> (https://github.com/s-a)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s-a/fake-require-main/issues"
+  },
+  "homepage": "https://github.com/s-a/fake-require-main#readme"
+}
