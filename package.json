@@ -1,6 +1,6 @@
 {
   "name": "fake-require-main",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fakes require.main for debug and testing purposes.",
   "main": "index.js",
   "directories": {
