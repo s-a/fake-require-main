@@ -1,5 +1,5 @@
 ## About
-Fakes require.main for debug and testing purposes.
+Fakes ```process.mainModule``` and ```require.main``` for debug and testing purposes.
 
 [![NPM Version](http://img.shields.io/npm/v/fake-require-main.svg)](https://www.npmjs.org/package/fake-require-main)
 [![Build Status](https://travis-ci.org/s-a/fake-require-main.svg)](https://travis-ci.org/s-a/fake-require-main)

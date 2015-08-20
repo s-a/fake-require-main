@@ -25,19 +25,25 @@ describe('fake require.main', function(){
 		require.main.should.not.deepEqual(module);
 	});
 
-	require.main = mainModuleBackup;
-
 	it('should not assigned to this module __filename', function(){
+		require.main = mainModuleBackup;
 		require.main.should.not.deepEqual(module);
 	});
 
 	it('should be assigned to this module', function(){
 		fakeMainModule.fake(require, __filename);
 		require.main.should.deepEqual(module);
+		process.mainModule.should.deepEqual(module);
+	});
+
+	it('should not assigned to this module __filename', function(){
+		require.main = mainModuleBackup;
+		require.main.should.not.deepEqual(module);
 	});
 
 	it('should be assigned to this module for node env', function(){
 		fakeMainModule.fakeFor(require, __filename, "node");
 		require.main.should.deepEqual(module);
+		process.mainModule.should.deepEqual(module);
 	});
 });

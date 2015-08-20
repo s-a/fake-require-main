@@ -14,8 +14,7 @@ FakeRequireMain.prototype.fake = function(require, filename) {
 	}
 
 	//console.log("changing main module", "from", require.main.filename, "to", filename);
-	require.main = require("module")._cache[filename];
-	module.parent.require.main = require("module")._cache[filename];
+	process.mainModule = require.main = module.parent.require.main = require("module")._cache[filename];
 };
 
 FakeRequireMain.prototype.fakeFor = function(require, filename, environment) {
